@@ -59,8 +59,10 @@ def standardize_features(X, mean, std):
 def add_bias_column(X):
     return np.column_stack([np.ones(X.shape[0]), X])
 
-# Step 6 - prepare_design_matrix (not yet solved)
-# TODO: implement
+# Step 6 - prepare_design_matrix
+def prepare_design_matrix(X, mean, std):
+    X_std = standardize_features(X, mean, std)
+    return add_bias_column(X_std)
 
 # Step 7 - predict_linear (not yet solved)
 # TODO: implement
