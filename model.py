@@ -94,8 +94,10 @@ def normal_equation(X, y):
     b = X.T @ y
     return np.linalg.solve(A, b)
 
-# Step 11 - initialize_weights (not yet solved)
-# TODO: implement
+# Step 11 - initialize_weights
+def initialize_weights(n_features, seed=None):
+    np.random.seed(seed)
+    return np.random.normal(0, 0.01, n_features)
 
 # Step 12 - gd_step (not yet solved)
 # TODO: implement
