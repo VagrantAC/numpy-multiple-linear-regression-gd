@@ -205,8 +205,11 @@ import math
 def mean_absolute_error(y_true, y_pred):
     return np.sum(np.abs(y_true - y_pred)) / len(y_pred)
 
-# Step 19 - root_mean_squared_error (not yet solved)
-# TODO: implement
+# Step 19 - root_mean_squared_error
+import math
+
+def root_mean_squared_error(y_true, y_pred):
+    return math.sqrt(np.sum((y_pred - y_true) ** 2) / len(y_pred))
 
 # Step 20 - r_squared (not yet solved)
 # TODO: implement
