@@ -211,8 +211,15 @@ import math
 def root_mean_squared_error(y_true, y_pred):
     return math.sqrt(np.sum((y_pred - y_true) ** 2) / len(y_pred))
 
-# Step 20 - r_squared (not yet solved)
-# TODO: implement
+# Step 20 - r_squared
+def r_squared(y_true, y_pred):
+    # TODO: Compute the coefficient of determination R^2.
+    ss_res = np.sum((y_pred - y_true) ** 2)
+    y_mean = np.mean(y_true)
+    ss_tot = np.sum((y_true - y_mean) ** 2)
+    if ss_tot == 0:
+        return np.nan
+    return 1 - ss_res / ss_tot
 
 # Step 21 - evaluate_regression (not yet solved)
 # TODO: implement
