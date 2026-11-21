@@ -277,7 +277,7 @@ def fit_lr_model(model, X_train, y_train, X_val, y_val):
         epochs=model['epochs'], patience=model['patience'],
         seed=model['seed'])
     model['weights'] = best_weights
-    model['best_weights'] = best_weights
+    # model['best_weights'] = best_weights
     model['train_losses'] = train_losses
     model['val_losses'] = val_losses
     return model
